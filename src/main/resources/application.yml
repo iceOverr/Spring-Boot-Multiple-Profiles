@@ -1,0 +1,25 @@
+spring:
+  profiles: production
+  datasource:
+    url: jdbc:postgresql://localhost:5444/demo_production?useUnicode=true&characterEncoding=UTF-8
+    username: postgres
+    password: 1234
+
+server:
+  port: 8888
+---
+
+spring:
+  profiles: develop
+  datasource:
+    url: jdbc:postgresql://localhost:5444/demo_develop?useUnicode=true&characterEncoding=UTF-8
+    username: postgres
+    password: 1234
+
+server:
+  port: 9999
+---
+
+spring:
+  profiles:
+    active: develop
